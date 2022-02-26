@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700;900&family=Nunito:wght@200;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+*:focus {
+    outline:none;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.sec_1 {
+    background-color: #333;
+}
+
+.sec_2 {
+    background-color: white;
+}
+
+.sec_3 {
+    min-height: 120vh;
+    background-color: white;
+}
+
+.sec_4 {
+    min-height: 75vh;
+    background-color: rgb(77, 182, 231);
+}
+
+
+li, a, button {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: #333;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav_container {
+    margin-left: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+}
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+   opacity: 0.8;
+   transition: all 0.4s ease 0s;
+}
+
+.nav_links li a:hover {
+    opacity: 1;
+ }
+
+ button {
+     padding: 10px 35px;
+     background-color: rgb(77, 182, 231);
+     border: none;
+     border-radius: 60px;
+     cursor: pointer;
+     transition: all 0.4s ease 0s;
+ }
+
+ button:hover {
+     filter: brightness(112%)
+ }
+
+ .content_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 14rem 4rem 0rem 4rem;
+ }
+
+ .content_left {
+     text-align: center;
+ }
+
+ .maintag_container {
+    overflow: hidden;
+    border-right: 0.15rem solid grey;
+    white-space: nowrap;
+    width: 0;
+    animation:
+        typing 1.5s steps(100, end) forwards,
+        blink 1.5s infinite;
+ }
+#main_tag {
+     color: white;
+     font-family: "Lato", sans-serif;
+     font-weight: 700;
+     font-size: 4rem;
+ }
+
+ #main_p {
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+ }
+
+ .scrollnav {
+     display: flex;
+     justify-content: center;
+     margin-top: 100px;
+     z-index: 0;
+ }
+
+ .scroll {
+    height: 40px;
+    width: 22.5px;
+    border: 2px solid white;
+    position: absolute;
+    border-radius: 60px;
+    cursor: pointer;
+ }
+
+ .scroll:before {
+    height: 1px;
+    width: 1px;
+    content: "";
+    margin: auto;
+    background-color: white;
+    border: 2.5px solid white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5px;
+    border-radius: 30px;
+    animation: move-down 3s infinite;
+ }
+
+ @keyframes move-down {
+     0% {
+         opacity: 0;
+     }
+     50% {
+         opacity: 1;
+     }
+     100% {
+         transform: translateY(1.4rem);
+         opacity: 0;
+     }
+ }
+
+ @keyframes typing {
+     from {
+         width: 0;
+     }
+     to {
+         width: 100%;
+     }
+ }
+
+ @keyframes blink {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: grey;
+    }
+    100% {
+        border-color: transparent;
+    }
+  }
+
+
+ /* Section 2 */
+ .content2_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    padding: 6rem 4rem 0rem 4rem;
+ }
+
+ .content2_left {
+    width: 60vw;
+    padding-right: 4rem;
+    padding-top: 0rem;
+ }
+ 
+ .content2_right {
+     width:40vw;
+ }
+
+ .content2_table {
+    color: black;
+ }
+
+ .table1 {
+     border-collapse: collapse;
+     font-size: 0.8rem;
+     font-family: "Lato", sans-serif;
+ }
+
+ .table1 th,
+ .table1 td {
+     padding: 12px 15px;
+     border: thin solid black;
+ }
+
+ #sec2_tag {
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+ }
+
+ #sec2_p {
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+ }
+
+ #cvlink {
+     color: blue;
+ }
+
+ #content2_img {
+     filter: drop-shadow(18px 18px 0.8rem rgb(165, 159, 159));
+     width: 89%;
+     height: auto;
+     min-width: 225px;
+ }
+
+
+ /* Section 3 */
+ .content3_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 7rem 4rem 0rem 4rem;
+ }
+
+ .content3_left {
+    width: 48%;
+    text-align: center;
+    padding-top: 4rem;
+ }
+
+ .vid_container {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+.vid_container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 89%;
+}
+
+ .content3_right
+ {
+    width: 50%;
+    text-align: center;
+    padding-top: 4rem;
+ }
+
+ .container_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+
+ #vid1 {
+     padding-top: 2rem;
+ }
+
+ #sec3_tag {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+ }
+
+ #sec3_p {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+ }
+
+ #sec3_head1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+ }
+
+ #sec3_head2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+ }
+
+ #sec3_img {
+    padding-top: 2rem;
+ }
+
+
+ /* Section 4 */
+
+ .content4_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 4rem 0rem 4rem;
+ }
+
+ .content4_form {
+     padding-top: 2rem;
+     justify-content: center;
+ }
+
+ .content4_form_row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+ }
+
+ input[type=submit] {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    width: 8rem;
+    margin: 2rem auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+  }
+
+  input[type=submit]:hover {
+    background-color: #01a167;
+  }
+
+ #sec4_tag {
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+ }
+
+ #name, #email, #linkedin, #message{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    border: thin solid #ccc;
+ }
+
+#name, #linkedin {
+    width: 15rem;
+}
+
+#message {
+    width: 30rem;
+}
+
+ #email {
+     width: 30rem;
+ }
+
+
+ @media only screen and (max-width: 1024px) {
+    #main_tag {
+        font-size: 2rem;
+    }
+    #sec2_tag {
+        font-size: 2rem;
+     }
+    
+     #sec2_p {
+        font-size: 1rem;
+     }
+     .table1 {
+        font-size: 0.7rem;
+    }
+    #sec3_tag {
+        font-size: 2rem;
+     }
+    
+     #sec3_p {
+        font-size: 1rem;
+     }
+    
+     #sec3_head1 {
+        font-size: 1.2rem;
+     }
+    
+     #sec3_head2 {
+        font-size: 1.2rem;
+     }
+     #sec4_tag {
+        font-size: 2rem;
+     }
+     .content4_main {
+        padding: 5rem 4rem 0rem 4rem;
+     }
+     .content3_main {
+        padding-top: 6rem;
+     }
+    .content3_left {
+        padding-top: 2rem;
+     }
+    .content3_right {
+        padding-top: 2rem;
+    }
+ }
+
+ @media only screen and (max-width: 800px) {
+    .content2_table {
+        width: 200%;
+     }
+     li, a, button {
+        font-size: 14px;
+    }
+     #sec3_head1 {
+        font-size: 1rem;
+     }
+    
+     #sec3_head2 {
+        font-size: 1rem;
+     }
+
+ }
+
+ @media only screen and (max-width: 670px) {
+    li, a, button {
+        font-size: 12px;
+    }
+    .nav_container {
+        margin-left: 32px;
+    }
+    header {
+        padding: 15px 10%;
+    }
+    #name, #linkedin {
+        width: 12rem;
+    }
+    
+    #message {
+        width: 24rem;
+    }
+    
+     #email {
+         width: 24rem;
+     }
+ }
+
+ @media only screen and (max-width: 600px) {
+    li, a, button {
+        font-size: 11px;
+    }
+    button {
+        padding: 10px 20px;
+    }
+    .nav_container {
+        margin-left: 23px;
+    }
+    .logo {
+        width: 70px;
+    }
+    #main_tag {
+        font-size: 1.8rem;
+    }
+    .content_main {
+        padding-top: 10rem;
+     }
+     .content2_left {
+        padding-right: 0rem;
+     }
+     .content2_table {
+        width: 180%;
+     }
+     #content2_img {
+        min-width: 200px;
+    }
+    #sec2_tag {
+        font-size: 1.6rem;
+     }
+     #sec2_p {
+        font-size: 0.8rem;
+     }
+     #sec3_tag {
+        font-size: 1.6rem;
+     }
+     #sec4_tag {
+         font-size: 1.6rem;
+     }
+     .table1 {
+        font-size: 0.6rem;
+    }
+     .content4_main {
+        padding: 6rem 4rem 0rem 4rem;
+     }
+     #name, #linkedin {
+        width: 10rem;
+    }
+    
+    #message {
+        width: 20rem;
+    }
+    
+     #email {
+         width: 20rem;
+     }
+ }
